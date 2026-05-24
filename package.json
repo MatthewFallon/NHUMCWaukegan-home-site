@@ -6,6 +6,7 @@
     "node": ">=22.12.0"
   },
   "scripts": {
+    "setup": "allow-scripts run",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
@@ -13,5 +14,16 @@
   },
   "dependencies": {
     "astro": "^6.3.7"
+  },
+  "devDependencies": {
+    "@lavamoat/allow-scripts": "^5.0.2",
+    "@lavamoat/preinstall-always-fail": "^3.0.0"
+  },
+  "lavamoat": {
+    "allowScripts": {
+      "@lavamoat/preinstall-always-fail#3.0.0": false,
+      "astro>esbuild#0.27.7": true,
+      "astro>sharp#0.34.5": true
+    }
   }
 }
