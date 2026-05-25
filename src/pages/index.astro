@@ -3,10 +3,30 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Image from "astro/components/Image.astro";
 
 import congregationPic from '../assets/images/congregation-pic.webp'
+import altarSetting from '../assets/images/altar-setting.jpg'
+import openHearts from '../assets/images/open-hearts.jpg'
 ---
 
 <BaseLayout title="Welcome to New Hope Church in Waukegan!">
 
     <Image src={congregationPic} alt="A picture of our congregation."/>
+
+    <h2>We are a <a href="/statement">Reconciling Ministry</a> out of Waukegan, Illinois</h2>
+
+    <p>We worship in person every Sunday at 10:00AM and also livestream from our <a href="https://www.facebook.com/NewHopeUMCWaukegan">Facebook</a>.</p>
+
+    <p>Thank You for visiting the church of faith, love, and service!</p>
+
+    <p>Please stop by, we are located at <a href="https://goo.gl/maps/JmFrcFhzZWtCoZim6">414 N. McAree Road in Waukegan, IL</a></p>
+
+    <Image src={altarSetting} alt="A view of our altar setting." aria-hidden />
+
+    <p>Please feel free to look through <a href="/gallery">Photos of Us</a> to get a picture of us as a congregation.</p>
+
+    <p>We are a diverse congregation dedicated to answering the call of a loving God. God invites each of us to know God and serve each other. As we respond to this loving invitation our faith comes alive, our lives are transformed, and we find purpose and peace.</p>
+
+    <p>Here is our full <a href="/statement">Mission Statement</a> is you're interested in getting to know us.</p>
+
+    <Image src={openHearts} alt={"Our site logo with a quote."} aria-hidden />
 
 </BaseLayout>
