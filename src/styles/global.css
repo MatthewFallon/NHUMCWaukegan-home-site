@@ -9,6 +9,10 @@ html {
 
 /* Main Section */
 
+body main {
+    max-width: 100vw;
+}
+
 @media (width >= 1250px) {
     body main {
         max-width: 50vw;
@@ -23,6 +27,14 @@ body main img {
 }
 
 /* Nav Section */
+
+nav {
+    flex-direction: column;
+}
+
+nav ul {
+    flex-direction: column;
+}
 
 nav ul:first-child li:first-child a {
     display: grid;
