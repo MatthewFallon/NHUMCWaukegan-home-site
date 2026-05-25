@@ -1,7 +1,12 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Image from "astro/components/Image.astro";
+
+import congregationPic from '../assets/images/congregation-pic.webp'
 ---
 
 <BaseLayout title="Welcome to New Hope Church in Waukegan!">
+
+    <Image src={congregationPic} alt="A picture of our congregation."/>
 
 </BaseLayout>

@@ -14,22 +14,10 @@ const { title } = Astro.props
 		<link rel="manifest" href="/site.webmanifest" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-        <script defer is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 		<title>{title}</title>
 	</head>
 	<body>
 		<h1>{title}</h1>
         <slot />
-        <script is:inline defer>
-            if (window.netlifyIdentity) {
-                window.netlifyIdentity.on("init", (user) => {
-                if (!user) {
-                    window.netlifyIdentity.on("login", () => {
-                    document.location.href = "/admin/";
-                    });
-                }
-                });
-            }
-        </script>
 	</body>
 </html>

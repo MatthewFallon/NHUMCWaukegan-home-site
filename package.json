@@ -13,6 +13,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@jee-r/astro-decap-cms": "^1.2.0",
     "astro": "^6.3.7"
   },
   "devDependencies": {
