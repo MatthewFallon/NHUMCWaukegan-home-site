@@ -36,6 +36,22 @@ nav ul {
     flex-direction: column;
 }
 
+@media (width >= 1250px) {
+    nav {
+        flex-direction: unset;
+    }
+
+    nav ul {
+        flex-direction: unset;
+    }
+}
+
+nav ul li a[aria-current="page"] {
+    pointer-events: none;
+    color: #f5a390;
+    text-decoration: underline;
+}
+
 nav ul:first-child li:first-child a {
     display: grid;
     grid-auto-flow: column;

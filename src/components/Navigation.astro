@@ -1,15 +1,20 @@
+---
+import NavLink from "./NavLink.astro";
+
+
+---
 <header>
     <nav>
         <ul>
             <li><a href="/"><img src="/favicon-96x96.png" width="50" alt="Site Logo"> New Hope UMC Waukegan</a></li>
         </ul>
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/posts">Events and News</a></li>
-            <li><a href="/mission">Mission Statement</a></li>
-            <li><a href="/gallery">Photos of Us</a></li>
-            <li><a href="/requests">Prayer Requests</a></li>
+            <li><NavLink href="/">Home</NavLink></li>
+            <li><NavLink href="/about">About</NavLink></li>
+            <li><NavLink href="/posts">Events and News</NavLink></li>
+            <li><NavLink href="/mission">Mission Statement</NavLink></li>
+            <li><NavLink href="/gallery">Photos of Us</NavLink></li>
+            <li><NavLink href="/requests">Prayer Requests</Navlink></li>
         </ul>
     </nav>
 </header>

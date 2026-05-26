@@ -1,0 +1,5 @@
+---
+const { pathname } = Astro.url
+const { href } = Astro.props
+---
+<a aria-current={pathname === href ? 'page' : 'false'} href={href}><slot /></a>
