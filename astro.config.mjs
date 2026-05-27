@@ -17,12 +17,22 @@ export default defineConfig({
                     // Define a blog post collection
                     {
                         name: 'posts',
-                        label: 'Blog Posts',
-                        folder: 'src/pages/posts',
+                        label: 'Events and News',
+                        folder: 'src/blog',
                         create: true,
                         delete: true,
                         fields: [
                             { name: 'title', widget: 'string', label: 'Post Title' },
+                            { name: 'description', widget: 'string', label: 'Post Description' },
+                            { name: 'pubDate', widget: 'datetime', label: 'Date', default: '{{now}}', date_format: 'MMMM DD, YYYY' },
+                            { 
+                                name: 'image', widget: 'object', label: 'Post Cover Image',
+                                fields: [
+                                    { name: 'url', widget: 'image', label: 'file' },
+                                    { name: 'alt', widget: 'string', label: 'alternate text' },
+                                ]
+                            },
+                            { name: 'tags', widget: 'list', label: 'Tags' },
                             { name: 'body', widget: 'markdown', label: 'Post Body' },
                         ],
                     },

@@ -1,8 +1,16 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
-
+const allPosts = await getCollection("blog")
 ---
 <BaseLayout title="Events and News" >
-    
+    <p>Events and news from our church.</p>
+    <ul>
+        {
+            allPosts.map((post) => (
+                <li><a href={`/posts/${post.id}`}>{post.data.title}</a></li>
+            ))
+        }
+    </ul>
 </BaseLayout>
