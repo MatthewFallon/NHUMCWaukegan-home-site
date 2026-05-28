@@ -1,7 +1,32 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const allPhotos = await getCollection("gallery")
 ---
 
 <BaseLayout title="Photos of Us" >
-    
+    <div class="gallery">
+        {
+            allPhotos.map((photo) => (
+                <div>
+                    <img src={photo.data.image.url} alt={photo.data.image.alt}>
+                </div>
+            ))
+        }
+    </div>
 </BaseLayout>
+<style>
+    img {
+        border-radius: 10px;
+        margin: 12px auto;
+    }
+    @media (width >= 1250px) {
+        .gallery {
+            display: grid;
+            grid-template: auto / 1fr 1fr 1fr;
+            align-items: center; 
+            gap: 0 12px;
+        }
+    }
+</style>

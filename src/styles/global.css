@@ -36,6 +36,35 @@ nav ul {
     flex-direction: column;
 }
 
+.menu[aria-expanded=false] {
+    max-height: 0px;
+}
+
+.menu {
+    max-height: 375px;
+    transition: all 1s ease-in-out;
+    overflow: hidden;
+}
+
+nav div ul {
+    display: inline;
+    padding-inline-start: 24px;
+}
+
+nav button {
+    padding: 0;
+    align-self: flex-start;
+    justify-self: flex-start;
+    height: 48px;
+    width: 48px;
+}
+
+nav button svg{
+    height: 90%;
+    width: 90%;
+
+}
+
 @media (width >= 1250px) {
     nav {
         flex-direction: unset;
@@ -43,6 +72,11 @@ nav ul {
 
     nav ul {
         flex-direction: unset;
+        display: unset;
+    }
+
+    nav button {
+        display: none
     }
 }
 

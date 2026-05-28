@@ -1,0 +1,7 @@
+---
+title: A Test Photo
+description: A photo for us to look at for testing
+image:
+  url: /assets/images/vanilla-bean-donuts-k2-684855884.jpg
+  alt: A photo of pink donuts on a sheet.
+---

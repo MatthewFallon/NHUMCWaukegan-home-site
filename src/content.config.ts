@@ -16,8 +16,16 @@ const blog = defineCollection({
     })
 })
 
-// const gallery = defineCollection({
-//     loader: glob({pattern: '**/[^_]*.md'})
-// })
+const gallery = defineCollection({
+    loader: glob({pattern: '**/[^_]*.json', base: './src/photodescriptions'}),
+    schema: z.object({
+        title: z.string(),
+        description: z.string(),
+        image: z.object({
+            url: z.string(),
+            alt: z.string()
+        })
+    })
+})
 
-export const collections = { blog }
+export const collections = { blog, gallery }

@@ -1,14 +1,21 @@
 ---
 import NavLink from "./NavLink.astro";
-
+import { Icon } from "astro-icon/components";
 
 ---
 <header>
     <nav>
+        <div>
+            <button>
+            <Icon id="nav-menu-open"style="display:inline" name="mdi:hamburger-menu" />
+            <Icon id="nav-menu-close" style="display:none" name="mdi:close" />
+        </button>
         <ul>
             <li><a href="/"><img src="/favicon-96x96.png" width="50" alt="Site Logo"> New Hope UMC Waukegan</a></li>
         </ul>
-        <ul>
+        </div>
+        
+        <ul class="menu" aria-expanded="false">
             <li><NavLink href="/">Home</NavLink></li>
             <li><NavLink href="/about">About</NavLink></li>
             <li><NavLink href="/posts">Events and News</NavLink></li>
@@ -18,3 +25,22 @@ import NavLink from "./NavLink.astro";
         </ul>
     </nav>
 </header>
+
+<script>
+    function menuOpen(elem: Event) {
+        let open = document.getElementById("nav-menu-open")
+        let close = document.getElementById("nav-menu-close")
+        if (open && close) {
+            open.style.display = open.style.display === 'inline' ? 'none' : 'inline'
+            close.style.display = close.style.display === 'inline' ? 'none' : 'inline'
+            let menu = document.querySelector(".menu")
+            if(menu) {
+                console.log(menu.ariaExpanded);
+                
+                menu.ariaExpanded = menu.ariaExpanded === "false" ? "true" : "false"
+            }
+        }
+    }
+
+    document.querySelector("nav button")?.addEventListener("click", menuOpen)
+</script>
