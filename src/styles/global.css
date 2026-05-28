@@ -42,7 +42,7 @@ nav ul {
 
 .menu {
     max-height: 375px;
-    transition: all 1s ease-in-out;
+    transition: max-height 1s ease-in-out;
     overflow: hidden;
 }
 
@@ -72,7 +72,10 @@ nav button svg{
 
     nav ul {
         flex-direction: unset;
-        display: unset;
+    }
+
+    .menu[aria-expanded=false] {
+        max-height: unset;
     }
 
     nav button {
