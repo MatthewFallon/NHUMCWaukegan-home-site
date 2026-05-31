@@ -86,6 +86,16 @@ export default defineConfig({
                                     { name: 'body', widget: 'markdown', label: 'Page Body'}
                                 ]
                             },
+                            {
+                                name: 'mission',
+                                label: 'Mission Statement Page',
+                                file: 'src/pages/mission.md',
+                                fields:[
+                                    { name: 'title', widget: 'hidden', label: 'Page Title', default: 'Our Mission' },
+                                    { name: 'layout', widget: 'hidden', label: 'Page Layout', default: '../layouts/BaseLayout.astro' },
+                                    { name: 'body', widget: 'markdown', label: 'Page Body'}
+                                ]
+                            },
                         ]
                     }
                     
