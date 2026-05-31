@@ -5,6 +5,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 const allPosts = await getCollection("blog")
 ---
 <BaseLayout title="Events and News" >
+    <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FChicago&showPrint=0&src=bmV3aG9wZXVtY3dhdWtlZ2FuQGdtYWlsLmNvbQ&color=%234285f4" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
     <p>Events and news from our church.</p>
     <ul>
         {
