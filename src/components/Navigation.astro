@@ -21,9 +21,9 @@ const allRootMDPages = Object.values(import.meta.glob('/src/pages/*.md', {eager:
             {
                 allRootMDPages.map((post:any) => <li><NavLink href={post.url + '/'}>{post.frontmatter.menuTitle}</NavLink></li>)
             }
-            <li><NavLink href="/posts">Events and News</NavLink></li>
-            <li><NavLink href="/gallery">Photos of Us</NavLink></li>
-            <li><NavLink href="/requests">Prayer Requests</Navlink></li>
+            <li><NavLink href="/posts/">Events and News</NavLink></li>
+            <li><NavLink href="/gallery/">Photos of Us</NavLink></li>
+            <li><NavLink href="/requests/">Prayer Requests</Navlink></li>
         </ul>
     </nav>
 </header>
