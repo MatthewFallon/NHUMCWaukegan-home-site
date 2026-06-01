@@ -1,5 +1,6 @@
 ---
 title: Welcome to New Hope Church in Waukegan!
+menuTitle: Home
 layout: ../layouts/BaseLayout.astro
 ---
 ![A picture of our congregation.](/assets/images/congregation-pic.webp)

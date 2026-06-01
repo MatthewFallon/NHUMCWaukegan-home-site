@@ -72,6 +72,7 @@ export default defineConfig({
                                 file: 'src/pages/about.md',
                                 fields:[
                                     { name: 'title', widget: 'hidden', label: 'Page Title', default: 'About Us!' },
+                                    { name: 'menuTitle', widget: 'hidden', label: 'Page Menu Title', default: 'About' },
                                     { name: 'layout', widget: 'hidden', label: 'Page Layout', default: '../layouts/BaseLayout.astro' },
                                     { name: 'body', widget: 'markdown', label: 'Page Body'}
                                 ]
@@ -82,6 +83,7 @@ export default defineConfig({
                                 file: 'src/pages/index.md',
                                 fields:[
                                     { name: 'title', widget: 'hidden', label: 'Page Title', default: 'Welcome to New Hope Church in Waukegan!' },
+                                    { name: 'menuTitle', widget: 'hidden', label: 'Page Menu Title', default: 'Home' },
                                     { name: 'layout', widget: 'hidden', label: 'Page Layout', default: '../layouts/BaseLayout.astro' },
                                     { name: 'body', widget: 'markdown', label: 'Page Body'}
                                 ]
@@ -92,6 +94,7 @@ export default defineConfig({
                                 file: 'src/pages/mission.md',
                                 fields:[
                                     { name: 'title', widget: 'hidden', label: 'Page Title', default: 'Our Mission' },
+                                    { name: 'menuTitle', widget: 'hidden', label: 'Page Menu Title', default: 'Mission Statement' },
                                     { name: 'layout', widget: 'hidden', label: 'Page Layout', default: '../layouts/BaseLayout.astro' },
                                     { name: 'body', widget: 'markdown', label: 'Page Body'}
                                 ]

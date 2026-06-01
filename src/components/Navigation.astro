@@ -2,6 +2,8 @@
 import NavLink from "./NavLink.astro";
 import { Icon } from "astro-icon/components";
 
+const allRootMDPages = Object.values(import.meta.glob('/src/pages/*.md', {eager: true})).sort((apost: any,bpost:any) => bpost.url < apost.url ? 1 : -1)
+
 ---
 <header>
     <nav>
@@ -16,10 +18,10 @@ import { Icon } from "astro-icon/components";
         </div>
         
         <ul class="menu" aria-expanded="false">
-            <li><NavLink href="/">Home</NavLink></li>
-            <li><NavLink href="/about">About</NavLink></li>
+            {
+                allRootMDPages.map((post:any) => <li><NavLink href={`${post.url}`}>{post.frontmatter.menuTitle}</NavLink></li>)
+            }
             <li><NavLink href="/posts">Events and News</NavLink></li>
-            <li><NavLink href="/mission">Mission Statement</NavLink></li>
             <li><NavLink href="/gallery">Photos of Us</NavLink></li>
             <li><NavLink href="/requests">Prayer Requests</Navlink></li>
         </ul>

@@ -1,5 +1,6 @@
 ---
 layout: '../layouts/BaseLayout.astro'
+menuTitle: About
 title: About Us!
 
 ---

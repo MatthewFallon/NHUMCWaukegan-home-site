@@ -1,5 +1,6 @@
 ---
 title: Our Mission
+menuTitle: Mission Statement
 layout: ../layouts/BaseLayout.astro
 ---
 
