@@ -5,7 +5,8 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 const allPosts = await getCollection("blog")
 ---
 <BaseLayout title="Events and News" >
-    <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FChicago&showPrint=0&src=bmV3aG9wZXVtY3dhdWtlZ2FuQGdtYWlsLmNvbQ&color=%234285f4" style="border:solid 1px #777" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+    <iframe id="desktop-calendar" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FChicago&showPrint=0&src=bmV3aG9wZXVtY3dhdWtlZ2FuQGdtYWlsLmNvbQ&color=%234285f4" style="border:solid 1px #777" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+    <iframe id="mobile-calendar" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FChicago&showPrint=0&mode=AGENDA&src=bmV3aG9wZXVtY3dhdWtlZ2FuQGdtYWlsLmNvbQ&color=%234285f4" style="border:solid 1px #777" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
     <p>Events and news from our church.</p>
     <ul>
         {
@@ -15,3 +16,19 @@ const allPosts = await getCollection("blog")
         }
     </ul>
 </BaseLayout>
+
+<style>
+    #desktop-calendar {
+        display: none;
+    }
+
+    @media (width > 1250px) {
+        #desktop-calendar {
+            display: unset;
+        }
+        
+        #mobile-calendar {
+            display: none;
+        }
+    }
+</style>
