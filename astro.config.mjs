@@ -17,6 +17,10 @@ export default defineConfig({
                 site_url: "https://newhopewaukegan.org",
                 media_folder: "/public/assets/images",// Media files will be stored in the repo under static/images/uploads
                 public_folder: "/assets/images", // The src attribute for uploaded media will begin with /images/uploads
+                logo: {
+                    src: "https://newhopewaukegan.org/android-chrome-512x512.png",
+                    show_in_header: true
+                },
                 backend: {
                     name: 'git-gateway',
                     branch: 'main',
