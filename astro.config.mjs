@@ -14,6 +14,7 @@ export default defineConfig({
                 ['body, h1, ul, p {font-family: \'Gill Sans\', \'Gill Sans MT\', Calibri, \'Trebuchet MS\', sans-serif;}', {raw: true}]
             ],
             config: {
+                site_url: "https://newhopewaukegan.org/",
                 media_folder: "/public/assets/images",// Media files will be stored in the repo under static/images/uploads
                 public_folder: "/assets/images", // The src attribute for uploaded media will begin with /images/uploads
                 backend: {
