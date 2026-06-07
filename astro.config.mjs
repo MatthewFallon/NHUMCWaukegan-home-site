@@ -68,23 +68,23 @@ export default defineConfig({
                         label: 'Pages',
                         files: [
                             {
-                                name: 'about',
-                                label: 'About Page',
-                                file: 'src/pages/about.md',
-                                fields:[
-                                    { name: 'title', widget: 'hidden', label: 'Page Title', default: 'About Us!' },
-                                    { name: 'menuTitle', widget: 'hidden', label: 'Page Menu Title', default: 'About' },
-                                    { name: 'layout', widget: 'hidden', label: 'Page Layout', default: '../layouts/BaseLayout.astro' },
-                                    { name: 'body', widget: 'markdown', label: 'Page Body'}
-                                ]
-                            },
-                            {
                                 name: 'index',
                                 label: 'Home Page',
                                 file: 'src/pages/index.md',
                                 fields:[
                                     { name: 'title', widget: 'hidden', label: 'Page Title', default: 'Welcome to New Hope Church in Waukegan!' },
                                     { name: 'menuTitle', widget: 'hidden', label: 'Page Menu Title', default: 'Home' },
+                                    { name: 'layout', widget: 'hidden', label: 'Page Layout', default: '../layouts/BaseLayout.astro' },
+                                    { name: 'body', widget: 'markdown', label: 'Page Body'}
+                                ]
+                            },
+                            {
+                                name: 'about',
+                                label: 'About Page',
+                                file: 'src/pages/about.md',
+                                fields:[
+                                    { name: 'title', widget: 'hidden', label: 'Page Title', default: 'About Us!' },
+                                    { name: 'menuTitle', widget: 'hidden', label: 'Page Menu Title', default: 'About' },
                                     { name: 'layout', widget: 'hidden', label: 'Page Layout', default: '../layouts/BaseLayout.astro' },
                                     { name: 'body', widget: 'markdown', label: 'Page Body'}
                                 ]
