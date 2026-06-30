@@ -11,7 +11,7 @@ We worship in person every Sunday at 10:00AM and also livestream from our [Faceb
 
 Thank You for visiting the church of faith, love, and service!
 
-Please stop by, we are located at [414 N. McAree Road in Waukegan, IL](https://goo.gl/maps/JmFrcFhzZWtCoZim6)
+Please stop by, we are located at [414 N. McAree Road in Waukegan, IL](https://goo.gl/maps/JmFrcFhzZWtCoZim6) and visit our [Google Group](https://groups.google.com/g/newhopeumcofwaukegan) to sign up for our newsletter.
 
 ![A view of our altar setting.](/assets/images/altar-setting.jpg)
 
